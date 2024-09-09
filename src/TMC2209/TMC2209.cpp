@@ -24,7 +24,7 @@ void TMC2209::setup(HardwareSerial & serial,
   SerialAddress serial_address)
 {
   hardware_serial_ptr_ = &serial;
-  hardware_serial_ptr_->end();
+  // hardware_serial_ptr_->end();
   hardware_serial_ptr_->begin(serial_baud_rate);
 
   initialize(serial_baud_rate, serial_address);
@@ -81,7 +81,7 @@ void TMC2209::setup(SoftwareSerial & serial,
   SerialAddress serial_address)
 {
   software_serial_ptr_ = &serial;
-  software_serial_ptr_->end();
+  // software_serial_ptr_->end();
   software_serial_ptr_->begin(serial_baud_rate);
 
   initialize(serial_baud_rate, serial_address);
